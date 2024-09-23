@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovment : MonoBehaviour
 {
     public float speed = 10f;
-    private Rigidbody2D body;
+    public Rigidbody2D body;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +16,21 @@ public class PlayerMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        body.velocity = new Vector2(Input.GetAxis("Horizontal")*speed, body.velocity.y);
+        float horizontal = Input.GetAxis("Horizontal");
+        body.velocity = new Vector2(horizontal*speed, body.velocity.y);
         if (Input.GetKey(KeyCode.Space))
         {
             body.velocity = new Vector2(body.velocity.x,speed);
         }
+        //flip
+        if (horizontal > 0.01f)
+        {
+            transform.localScale= Vector3.one;
+        }
+        else if(horizontal < -0.01f)
+        {
+            transform.localScale = new Vector3(-1,1,1);
+        }
+
     }
 }
