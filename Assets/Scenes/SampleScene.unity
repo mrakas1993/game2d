@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  body: {fileID: 0}
+  grounded: 0
 --- !u!95 &178719994
 Animator:
   serializedVersion: 5
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 223154995}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
