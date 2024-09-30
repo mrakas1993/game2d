@@ -38,6 +38,7 @@ public class PlayerMovment : MonoBehaviour
 
         //anim
         anim.SetBool("move",horizontal != 0);
+        anim.SetBool("ground", grounded);
 
     }
 
