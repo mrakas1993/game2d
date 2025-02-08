@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
+  - wall
+  - bullet
+  - platform
   layers:
   - Default
   - TransparentFX
